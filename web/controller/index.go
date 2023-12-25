@@ -2,6 +2,7 @@ package controller
 
 import (
 	"github.com/sea-team/gofound/searcher/model"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,6 +13,9 @@ func AddIndex(c *gin.Context) {
 	if err := c.ShouldBindJSON(&document); err != nil {
 		ResponseErrorWithMsg(c, err.Error())
 		return
+	}
+	if document.Id == 0 {
+		document.Id = uint32(time.Now().Unix())
 	}
 	dbName := c.Query("database")
 	if dbName == "" {
