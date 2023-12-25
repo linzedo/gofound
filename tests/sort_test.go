@@ -2,7 +2,7 @@ package tests
 
 import (
 	"fmt"
-	"github.com/sea-team/gofound/searcher/utils"
+	"github.com/linzedo/gofound/searcher/utils"
 	"math/rand"
 	"sort"
 	"testing"

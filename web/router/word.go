@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/sea-team/gofound/web/controller"
+	"github.com/linzedo/gofound/web/controller"
 
 	"github.com/gin-gonic/gin"
 )

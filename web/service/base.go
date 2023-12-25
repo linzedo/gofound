@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/sea-team/gofound/global"
-	"github.com/sea-team/gofound/searcher"
-	"github.com/sea-team/gofound/searcher/model"
-	"github.com/sea-team/gofound/searcher/system"
+	"github.com/linzedo/gofound/global"
+	"github.com/linzedo/gofound/searcher"
+	"github.com/linzedo/gofound/searcher/model"
+	"github.com/linzedo/gofound/searcher/system"
 	"os"
 	"runtime"
 )

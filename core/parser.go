@@ -3,7 +3,7 @@ package core
 import (
 	"flag"
 	"fmt"
-	"github.com/sea-team/gofound/global"
+	"github.com/linzedo/gofound/global"
 	"os"
 	"runtime"
 

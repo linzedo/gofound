@@ -2,7 +2,7 @@ package sorts
 
 import (
 	"github.com/emirpasic/gods/trees/avltree"
-	"github.com/sea-team/gofound/searcher/utils"
+	"github.com/linzedo/gofound/searcher/utils"
 	"log"
 	"sync"
 )

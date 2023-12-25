@@ -2,7 +2,7 @@ package words
 
 import (
 	"embed"
-	"github.com/sea-team/gofound/searcher/utils"
+	"github.com/linzedo/gofound/searcher/utils"
 	"strings"
 
 	"github.com/wangbin/jiebago"
@@ -45,11 +45,14 @@ func (t *Tokenizer) Cut(text string) []string {
 	var wordMap = make(map[string]struct{})
 
 	resultChan := t.seg.CutForSearch(text, true)
-	var wordsSlice []string
+	var wordsSlice = []string{""}
 	for {
 		w, ok := <-resultChan
 		if !ok {
 			break
+		}
+		if utils.IsSpace(w) || utils.IsPunctuation(w) {
+			continue
 		}
 		_, found := wordMap[w]
 		if !found {

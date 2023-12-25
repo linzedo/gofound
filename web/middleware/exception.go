@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/sea-team/gofound/web"
+	"github.com/linzedo/gofound/web"
 	"runtime/debug"
 
 	"github.com/gin-gonic/gin"

@@ -3,11 +3,11 @@ package core
 import (
 	"context"
 	"fmt"
-	"github.com/sea-team/gofound/global"
-	"github.com/sea-team/gofound/searcher"
-	"github.com/sea-team/gofound/searcher/words"
-	"github.com/sea-team/gofound/web/controller"
-	"github.com/sea-team/gofound/web/router"
+	"github.com/linzedo/gofound/global"
+	"github.com/linzedo/gofound/searcher"
+	"github.com/linzedo/gofound/searcher/words"
+	"github.com/linzedo/gofound/web/controller"
+	"github.com/linzedo/gofound/web/router"
 	"log"
 	"net/http"
 

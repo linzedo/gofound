@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/sea-team/gofound/searcher/model"
+	"github.com/linzedo/gofound/searcher/model"
 	"time"
 
 	"github.com/gin-gonic/gin"

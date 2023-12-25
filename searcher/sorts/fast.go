@@ -1,7 +1,7 @@
 package sorts
 
 import (
-	"github.com/sea-team/gofound/searcher/model"
+	"github.com/linzedo/gofound/searcher/model"
 	"sort"
 	"strings"
 	"sync"

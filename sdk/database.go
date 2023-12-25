@@ -1,7 +1,7 @@
 package gofound
 
 import (
-	"github.com/sea-team/gofound/searcher"
+	"github.com/linzedo/gofound/searcher"
 
 	"github.com/syndtr/goleveldb/leveldb/errors"
 )

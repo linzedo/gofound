@@ -2,9 +2,9 @@ package gofound
 
 import (
 	"fmt"
-	"github.com/sea-team/gofound/core"
-	"github.com/sea-team/gofound/global"
-	"github.com/sea-team/gofound/searcher"
+	"github.com/linzedo/gofound/core"
+	"github.com/linzedo/gofound/global"
+	"github.com/linzedo/gofound/searcher"
 	"os"
 	"runtime"
 	"sync"

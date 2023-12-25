@@ -2,13 +2,13 @@ package searcher
 
 import (
 	"fmt"
-	"github.com/sea-team/gofound/searcher/arrays"
-	"github.com/sea-team/gofound/searcher/model"
-	"github.com/sea-team/gofound/searcher/pagination"
-	"github.com/sea-team/gofound/searcher/sorts"
-	"github.com/sea-team/gofound/searcher/storage"
-	"github.com/sea-team/gofound/searcher/utils"
-	"github.com/sea-team/gofound/searcher/words"
+	"github.com/linzedo/gofound/searcher/arrays"
+	"github.com/linzedo/gofound/searcher/model"
+	"github.com/linzedo/gofound/searcher/pagination"
+	"github.com/linzedo/gofound/searcher/sorts"
+	"github.com/linzedo/gofound/searcher/storage"
+	"github.com/linzedo/gofound/searcher/utils"
+	"github.com/linzedo/gofound/searcher/words"
 	"log"
 	"os"
 	"runtime"
@@ -352,9 +352,16 @@ func (e *Engine) addPositiveIndex(index *model.IndexDoc, keys []string) {
 func (e *Engine) MultiSearch(request *model.SearchRequest) (*model.SearchResult, error) {
 	//等待搜索初始化完成
 	e.Wait()
+	var (
+		words []string
+	)
 
 	//分词搜索
-	words := e.Tokenizer.Cut(request.Query)
+	if request.Query == "" {
+		words = []string{""}
+	} else {
+		words = e.Tokenizer.Cut(request.Query)[1:]
+	}
 
 	fastSort := &sorts.FastSort{
 		IsDebug: e.IsDebug,

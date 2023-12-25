@@ -2,7 +2,7 @@ package admin
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sea-team/gofound/web/admin/assets"
+	"github.com/linzedo/gofound/web/admin/assets"
 	"net/http"
 	"net/url"
 	"os"

@@ -1,7 +1,7 @@
 package controller
 
 import (
-	service2 "github.com/sea-team/gofound/web/service"
+	service2 "github.com/linzedo/gofound/web/service"
 )
 
 var srv *Services
