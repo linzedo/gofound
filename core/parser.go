@@ -67,3 +67,16 @@ func Parser() *global.Config {
 
 	return config
 }
+
+func NewConfig(configPath string) *global.Config {
+	config := &global.Config{}
+	file, err := os.ReadFile(configPath) //详情：https://github.com/golang/go/issues/42026
+	if err != nil {
+		panic(err)
+	}
+	err = yaml.Unmarshal(file, config)
+	if err != nil {
+		panic(err)
+	}
+	return config
+}
